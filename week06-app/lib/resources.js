@@ -34,3 +34,25 @@ export async function getResourceData(idRequested) {
 
   return output;
 }
+
+export async function getFood(){
+  let output = [];
+  try{
+    const snapshot = await firebase.collection("resources").get();
+    snapshot.forEach(
+      (doc) => {
+        output.push(
+          {
+            id: doc.id.toString(),
+            img: doc.data().img.toString(),
+            food: doc.data().food.toString()            
+          }
+        );
+      }
+    );
+  } catch(error) {
+    console.error(error)
+  }
+
+  return output;
+}
