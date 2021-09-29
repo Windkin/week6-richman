@@ -26,7 +26,7 @@ export default function Home({ itemData }) {
                 <Link href={`/resources/${id}`}>
                   <a>
                     <img src={img}/><br/>
-                      {food}
+                      <h3>{food}</h3>
                   </a>
                 </Link>
               </div>

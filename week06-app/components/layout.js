@@ -18,9 +18,11 @@ export default function Layout ({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
+        <div className="text-center">
           <Link href="../../">
-            <a className="btn btn-primary mt-3">← Back to home</a>
+            <a className="btn btn-outline-light mt-3 mb-3">← Back to home</a>
           </Link>
+          </div>
         )
       }
       <footer className="text-center">

@@ -34,7 +34,7 @@ export default function Entry({ itemData }) {
               {itemData ?
               <img src={itemData.data.imgLg} alt="" /> : null}
                 {itemData ?
-                <p>Made {itemData.data.date}</p> : null}
+                <h4>Made {itemData.data.date}</h4> : null}
           </div>
 
         </div>
